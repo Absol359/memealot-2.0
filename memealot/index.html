@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-a-lot</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body style="background-image: url('stargarak4.png');">
+    <!-- alla bilder som jag ska använda läggs in här -->
+    <div style="display:none;">
+        <img id="spongebobmeme" width="220" height="277" src="spongebobmeme.png">
+    </div>
+    <div style="display:none;">
+        <img id="twobuttons" width="220" height="277" src="twobuttons.webp">
+    </div>
+
+    <!-- Härifrån skrivs alla knappar -->
+    <header>
+        <table><tr>
+            <td>
+                <div class="center" >
+                    <h1>Meme-a-lot</h1>  
+                </div>
+            </td>
+            <td>
+                <a href="aboutus.html">
+                    <button class="button">About us</button>
+                  </a>
+            </td>
+            <td>
+                <button onclick="document.getElementById('id01').style.display='block'" class="button">Log in</button>
+
+            <div id="id01" class="modal">
+  
+            <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="loginavatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                <button type="submit">Log in</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me!
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="donthaveanaccount()">forgot password?</button>
+            </div>
+            </form>
+            </div>
+            </td>
+            <td>
+                <a href="settings.html">
+                    <button class="button">settings</button>
+                  </a>
+            </td>
+       
+        </tr></table>
+    </header>
+    <canvas id="myCanvas" width="650" height="700" style="border:5px solid #000000;">
+        Sorry, your browser does not support canvas.
+    </canvas>
+
+    <input type="text" id="talkbubble1">
+    <input type="text" id="talkbubble2">
+    <input type="text" id="talkbubble3">
+    <p><button onclick="myCanvas()">Make it meme!</button></p>
+
+    <script defer type="text/javascript" src="./script.js" onload=""></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</html>
