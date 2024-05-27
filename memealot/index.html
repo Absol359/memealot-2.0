@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +15,9 @@
     </div>
     <div style="display:none;">
         <img id="twobuttons" width="220" height="277" src="twobuttons.webp">
+    </div>
+    <div style="display:none;">
+        <img id="todolist" width="220" height="277" src="todolist.jpg">
     </div>
 
     <!-- Härifrån skrivs alla knappar -->
@@ -60,22 +64,39 @@
             </form>
             </div>
             </td>
-            <td>
-                <a href="settings.html">
-                    <button class="button">settings</button>
-                  </a>
-            </td>
-       
+        
         </tr></table>
     </header>
-    <canvas id="myCanvas" width="650" height="700" style="border:5px solid #000000;">
-        Sorry, your browser does not support canvas.
-    </canvas>
+
+    <h1 class="text">Step 1. Choose your picure!</h1>
+    <div class="picchange">
+        <img src="spongebobmeme.png" alt="spongebobmeme" style="width:100%">
+        <button class="btn" onclick="changetospongebob()">Change to this picture</button>
+    </div>
+
+    <div class="picchange">
+        <img src="twobuttons.webp" alt="spongebobmeme" style="width:100%">
+        <button class="btn" onclick="changetotwobuttons()">Change to this picture</button>
+    </div>
+
+    <div class="picchange">
+        <img src="todolist.jpg" alt="spongebobmeme" style="width:100%">
+        <button class="btn" onclick="changetotodolist()">Change to this picture</button>
+    </div>
+
+    <h1 class="text">Step 2. Put in your meme!</h1>
 
     <input type="text" id="talkbubble1">
     <input type="text" id="talkbubble2">
     <input type="text" id="talkbubble3">
+
+    <h1 class="text">Step 3. Click the button and make it meme!</h1>
+
     <p><button onclick="myCanvas()">Make it meme!</button></p>
+
+    <canvas id="myCanvas" width="0px" height="0px">
+        Sorry, your browser does not support canvas.
+    </canvas>
 
     <script defer type="text/javascript" src="./script.js" onload=""></script>
 

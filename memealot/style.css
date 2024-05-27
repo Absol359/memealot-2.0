@@ -145,8 +145,43 @@ span.psw {
 
 /* </style för login>  */
 
+/* <style för canvas>  */
 .canvas{
   justify-content: center;
   border: #000;
   border-radius: 10px;
 }
+/* </style för canvas>  */
+
+/* <style för knappar i settings>  */
+.picchange {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.picchange img {
+  width: 100%;
+  height: auto;
+}
+
+.picchange .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.picchange .btn:hover {
+  background-color: blue;
+}
+/* </style för knappar i settings>  */
