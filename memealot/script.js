@@ -70,28 +70,4 @@ function myCanvas() {
  
      }
     
-  }
-
-// skript för about us  
-
-const xValues = ["the sponge bob meme","the red and blue button meme","Patrick's to do-list meme"];
-const yValues = [10, 6, 13];
-const barColors = ["yellow", "red","blue"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "What is the most popular meme here?"
-    }
-  }
-});
+}

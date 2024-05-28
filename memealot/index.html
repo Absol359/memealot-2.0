@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body style="background-image: url('stargarak4.png');">
+<body style="background-image: ('stargarak4.png');" src="images/stargarak4.png">
     <!-- alla bilder som jag ska använda läggs in här -->
     <div style="display:none;">
-        <img id="spongebobmeme" width="220" height="277" src="spongebobmeme.png">
+        <img id="spongebobmeme" width="220" height="277" src="images/spongebobmeme.png">
     </div>
     <div style="display:none;">
-        <img id="twobuttons" width="220" height="277" src="twobuttons.webp">
+        <img id="twobuttons" width="220" height="277" src="images/twobuttons.webp">
     </div>
     <div style="display:none;">
-        <img id="todolist" width="220" height="277" src="todolist.jpg">
+        <img id="todolist" width="220" height="277" src="images/todolist.jpg">
     </div>
 
     <!-- Härifrån skrivs alla knappar -->
@@ -31,9 +31,7 @@
             <td>
                 <a href="aboutus.html">
                     <button class="button">About us</button>
-                  </a>
-            </td>
-            <td>
+                </a>
                 <button onclick="document.getElementById('id01').style.display='block'" class="button">Log in</button>
 
             <div id="id01" class="modal">
@@ -70,17 +68,17 @@
 
     <h1 class="text">Step 1. Choose your picure!</h1>
     <div class="picchange">
-        <img src="spongebobmeme.png" alt="spongebobmeme" style="width:100%">
+        <img src="images/spongebobmeme.png" alt="spongebobmeme" style="width:100%">
         <button class="btn" onclick="changetospongebob()">Change to this picture</button>
     </div>
 
     <div class="picchange">
-        <img src="twobuttons.webp" alt="spongebobmeme" style="width:100%">
+        <img src="images/twobuttons.webp" alt="twobuttonsmeme" style="width:100%">
         <button class="btn" onclick="changetotwobuttons()">Change to this picture</button>
     </div>
 
     <div class="picchange">
-        <img src="todolist.jpg" alt="spongebobmeme" style="width:100%">
+        <img src="images/todolist.jpg" alt="todolistmeme" style="width:100%">
         <button class="btn" onclick="changetotodolist()">Change to this picture</button>
     </div>
 
