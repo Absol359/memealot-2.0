@@ -5,68 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme-a-lot</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     
 </head>
-<body style="background-image: ('stargarak4.png');" src="images/stargarak4.png">
-    <!-- alla bilder som jag ska använda läggs in här -->
+<body>
+    <!-- de här bilderna används i canvasen, behövs för getElementById -->
     <div style="display:none;">
-        <img id="spongebobmeme" width="220" height="277" src="images/spongebobmeme.png">
+        <img id="spongebobmeme" width="220" height="277" src="images/spongebobmeme.png" alt="spongebobmeme">
     </div>
     <div style="display:none;">
-        <img id="twobuttons" width="220" height="277" src="images/twobuttons.webp">
+        <img id="twobuttons" width="220" height="277" src="images/twobuttons.webp" alt="twobuttonsmeme">
     </div>
     <div style="display:none;">
-        <img id="todolist" width="220" height="277" src="images/todolist.jpg">
+        <img id="todolist" width="220" height="277" src="images/todolist.jpg" alt="todolistmeme">
     </div>
-
     <!-- Härifrån skrivs alla knappar -->
     <header>
-        <table><tr>
-            <td>
-                <div class="center" >
-                    <h1>Meme-a-lot</h1>  
-                </div>
-            </td>
-            <td>
-                <a href="aboutus.html">
-                    <button class="button">About us</button>
-                </a>
-                <button onclick="document.getElementById('id01').style.display='block'" class="button">Log in</button>
+        <h1>Meme-a-lot</h1>  
 
-            <div id="id01" class="modal">
-  
+        <a href="aboutus.html">
+            <p class="button">about us</p>
+        </a>
+    
+        <a href="legaldisclaimer.html">
+            <p class="button">Legal disclaimer!</p>
+        </a>
+                    <!-- Idé tagen från w3schools, har ändrat en del men typ samma kod -->
+        <button onclick="document.getElementById('id01').style.display='block'" class="button">Log in</button>
+    
+        <div id="id01" class="modal">
+    
             <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="loginavatar.jpg" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="images/loginavatar.jpg" alt="Avatar" class="avatar">
+                </div>
+    
+                <div class="container">
+                    <label>
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
         
-                <button type="submit">Log in</button>
-                <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me!
-                </label>
-            </div>
+                    <label>
+                        <b>Password</b>
+                    </label>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="button" onclick="donthaveanaccount()">forgot password?</button>
-            </div>
-            </form>
-            </div>
-            </td>
-        
-        </tr></table>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Log in</button>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me!
+                    </label>
+                </div>
+    
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="button" onclick="donthaveanaccount()">forgot password?</button>
+                </div>
+            </form>    <!-- den här informationen är inte kopplad till något, den är mer för att jag ville ha ett ställe där jag har en bild med css och en css-animation.  -->
+        </div>
     </header>
+    <!-- header slut -->
+    
 
     <h1 class="text">Step 1. Choose your picure!</h1>
+
     <div class="picchange">
         <img src="images/spongebobmeme.png" alt="spongebobmeme" style="width:100%">
         <button class="btn" onclick="changetospongebob()">Change to this picture</button>
@@ -81,35 +85,41 @@
         <img src="images/todolist.jpg" alt="todolistmeme" style="width:100%">
         <button class="btn" onclick="changetotodolist()">Change to this picture</button>
     </div>
+           
 
     <h1 class="text">Step 2. Put in your meme!</h1>
 
-    <input type="text" id="talkbubble1">
-    <input type="text" id="talkbubble2">
-    <input type="text" id="talkbubble3">
+    <input type="text" id="talkbubble1" placeholder="put your first text here...">
+    <input type="text" id="talkbubble2" placeholder="put your second text here...">
+    <input type="text" id="talkbubble3" placeholder="put your last text here...">
 
     <h1 class="text">Step 3. Click the button and make it meme!</h1>
 
-    <p><button onclick="myCanvas()">Make it meme!</button></p>
+    <p>
+        <button onclick="myCanvas()">Make it meme!</button>
+    </p>
 
-    <canvas id="myCanvas" width="0px" height="0px">
+    <!-- behöver en bas storlek på canvasen, den får en ny storlek senare i js -->
+    <canvas id="myCanvas" width="1" height="1">
         Sorry, your browser does not support canvas.
     </canvas>
 
-    <script defer type="text/javascript" src="./script.js" onload=""></script>
+    <footer>    <!-- samma footer för alla HTML-sidor -->
+        Meme-a-lot 2024
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+        </p>
+    </footer>
+
+    <script defer src="script/script.js" onload=""></script>
+
+    
+
 
 </body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
 
 </html>
