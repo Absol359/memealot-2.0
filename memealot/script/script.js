@@ -57,16 +57,16 @@ function myCanvas() {
        ctx.fillText(txt3.value, canvas.width*0.15, canvas.width*0.4);
 
     }else if(memepicnumb == 1){
-        ctx.fillText(txt1.value, 60, 120);
-        ctx.fillText(txt2.value, 240, 100);
+        ctx.fillText(txt1.value, canvas.width*0.1, canvas.width*0.15);
+        ctx.fillText(txt2.value, canvas.width*0.45, canvas.width*0.1);
         ctx.fillStyle = "#ffffff"
-        ctx.fillText(txt3.value, 40, 440);
+        ctx.fillText(txt3.value, canvas.width*0.15, canvas.width*0.65);
         ctx.fillstyle = "#000000"
  
      }else if(memepicnumb == 2){
-        ctx.fillText(txt1.value, 310, 250);
-        ctx.fillText(txt2.value, 320, 300);
-        ctx.fillText(txt3.value, 330, 350);
+        ctx.fillText(txt1.value, canvas.width*0.3, canvas.width*0.4);
+        ctx.fillText(txt2.value, canvas.width*0.3, canvas.width*0.5);
+        ctx.fillText(txt3.value, canvas.width*0.3, canvas.width*0.6);
  
     }
     
